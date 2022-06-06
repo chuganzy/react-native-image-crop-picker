@@ -468,7 +468,7 @@ declare module "react-native-image-crop-picker" {
     export type PickerErrorCode = PickerErrorCodeCommon | PickerErrorCodeIOS | PickerErrorCodeAndroid;
 
     /** Change return type based on `multiple` property. */
-    export type PossibleArray<O, T> = O extends { multiple: true; } ? T[] : T;
+    export type PossibleArray<O, T> = O extends { multiple: true; } ? T[] : (T | T[]);
 
     /** Isolate return type based on `mediaType` property. */
     type MediaType<O> =
